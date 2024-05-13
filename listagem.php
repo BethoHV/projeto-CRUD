@@ -28,12 +28,16 @@
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
-            background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(2, 22, 31));
+            background-image: linear-gradient(to left, rgb(252, 252, 252), rgb(0, 0, 0));
+        }
+        table{
+            background-color: rgba(0, 0, 0, 0.6);;
+            border-radius: 15px;
         }
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(0, 66, 133, 89%);">
         <div class="container" style="display: block">
             <a class="navbar-brand" href="#">Listagem</a>
             <?php if($admin == 1 ){?>
@@ -51,9 +55,6 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
-                    <?php if($admin == 1 ){?>
-                        <th scope="col">Senha</th>
-                    <?php }?>
                     <th scope="col">Email</th>
                     <th scope="col">Telefone</th>
                     <th scope="col">Gênero</th>
@@ -72,9 +73,6 @@
                         echo "<tr>";
                         echo "<td>".$user_data['id']."</td>";
                         echo "<td>".$user_data['nome']."</td>";
-                        if($admin == 1 ){
-                            echo "<td>".$user_data['senha']."</td>";
-                        }
                         echo "<td>".$user_data['email']."</td>";
                         echo "<td>".$user_data['telefone']."</td>";
                         echo "<td>".$user_data['genero']."</td>";

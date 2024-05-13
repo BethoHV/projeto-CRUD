@@ -7,10 +7,10 @@
 
     $conexao = new mysqli($dbHost,$dbUsername,$dnPassword,$dbNmae);
 
-    if($conexao->connect_errno){
-        echo "Erro na conexão";
-    }else{
-        echo "Conexão estabelecida!";
-    }
+    // if($conexao->connect_errno){
+    //     echo "Erro na conexão";
+    // }else{
+    //     echo "Conexão estabelecida!";
+    // }
 
 ?>
